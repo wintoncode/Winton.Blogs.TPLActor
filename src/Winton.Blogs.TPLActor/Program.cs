@@ -40,7 +40,11 @@ namespace Winton.Blogs.TPLActor
         {
             Console.WriteLine("Test 2");
             var actor = new Actor();
-            await actor.Enqueue(() => Task.Factory.StartNew(() => Console.WriteLine("Hello!")));
+            await actor.Enqueue(() =>
+                                {
+                                    Console.WriteLine("Hello!");
+                                    Task.Factory.StartNew(() => Console.WriteLine("Bonjour!"));
+                                });
             Console.WriteLine();
         }
 

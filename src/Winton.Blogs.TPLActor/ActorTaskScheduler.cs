@@ -32,8 +32,6 @@ namespace Winton.Blogs.TPLActor
 
         protected override void QueueTask(Task task)
         {
-            Console.WriteLine("Queuing task.");
-
             lock (_syncObject)
             {
                 _taskQueue.Enqueue(task);
@@ -49,6 +47,7 @@ namespace Winton.Blogs.TPLActor
 
                             while ((nextTask = TryGetNextTask()) != null)
                             {
+                                Console.WriteLine("Running actor task.");
                                 TryExecuteTask(nextTask);
                             }
 
