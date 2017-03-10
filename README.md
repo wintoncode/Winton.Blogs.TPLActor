@@ -5,4 +5,5 @@ integrates with the .NET Task Parallel Library.
 
 ## Note on building ##
 
-You'll need Visual Studio 2015 update 3 with the preview 2-1-003177 of the dotnet tools installed to build this code.
+Version `1.0` of the [.NET Core build tools](https://docs.microsoft.com/en-us/dotnet/articles/core/tools/) is required to build the source code.
+To build from Visual Studio you'll need VS 2017.
